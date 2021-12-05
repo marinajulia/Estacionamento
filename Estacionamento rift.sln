@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamento rift", "Estacionamento rift\Estacionamento rift.csproj", "{D682271B-7134-4A0F-82E8-C4C96E22D630}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamento.Api", "Estacionamento rift\Estacionamento.Api.csproj", "{D682271B-7134-4A0F-82E8-C4C96E22D630}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamento.Domain", "Estacionamento.Infra\Estacionamento.Domain.csproj", "{6D08056F-5912-42B3-8AE5-B3B6F5C91154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamento.Infra", "Estacionamento.Domain\Estacionamento.Infra.csproj", "{81A9FE7B-C13C-4000-9561-58DB04A11433}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamento.SharedKernel", "Estacionamento.SharedKernel\Estacionamento.SharedKernel.csproj", "{5E170BC0-5758-4A56-B1E8-DFC2C3EB99C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{D682271B-7134-4A0F-82E8-C4C96E22D630}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D682271B-7134-4A0F-82E8-C4C96E22D630}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D682271B-7134-4A0F-82E8-C4C96E22D630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D08056F-5912-42B3-8AE5-B3B6F5C91154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D08056F-5912-42B3-8AE5-B3B6F5C91154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D08056F-5912-42B3-8AE5-B3B6F5C91154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D08056F-5912-42B3-8AE5-B3B6F5C91154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A9FE7B-C13C-4000-9561-58DB04A11433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A9FE7B-C13C-4000-9561-58DB04A11433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A9FE7B-C13C-4000-9561-58DB04A11433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A9FE7B-C13C-4000-9561-58DB04A11433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E170BC0-5758-4A56-B1E8-DFC2C3EB99C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E170BC0-5758-4A56-B1E8-DFC2C3EB99C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E170BC0-5758-4A56-B1E8-DFC2C3EB99C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E170BC0-5758-4A56-B1E8-DFC2C3EB99C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

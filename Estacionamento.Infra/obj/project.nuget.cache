@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4EHU+KF+fyhX+vxOiRhmdtsxIQYh+uJkLvNOSUkAbKsbMKsPhGpYa7Hp01aKemril6pDMuwm5q/kl/4OBUGvDQ==",
+  "dgSpecHash": "UT2qBy3oK0FvK9KLiLlyJfD9p6SUogRYPmWL85sC9fKhzAXh/5xZlmFMtz9dJIqKbqCT1hWBOKVEXgnxZiGhHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento rift\\Estacionamento.Api.csproj",
+  "projectFilePath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\Estacionamento.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\marin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,0 +1,8 @@
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\netcoreapp3.1\Estacionamento.Infra.deps.json
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\netcoreapp3.1\Estacionamento.Infra.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\netcoreapp3.1\Estacionamento.Infra.pdb
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\netcoreapp3.1\Estacionamento.Infra.AssemblyInfoInputs.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\netcoreapp3.1\Estacionamento.Infra.AssemblyInfo.cs
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\netcoreapp3.1\Estacionamento.Infra.csproj.CoreCompileInputs.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\netcoreapp3.1\Estacionamento.Infra.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\netcoreapp3.1\Estacionamento.Infra.pdb

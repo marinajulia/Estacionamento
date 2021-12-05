@@ -1,0 +1,15 @@
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\net5.0\Estacionamento.Infra.deps.json
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\net5.0\Estacionamento.Infra.runtimeconfig.json
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\net5.0\Estacionamento.Infra.runtimeconfig.dev.json
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\net5.0\Estacionamento.Infra.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\net5.0\ref\Estacionamento.Infra.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\bin\Debug\net5.0\Estacionamento.Infra.pdb
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\Estacionamento.Infra.csproj.AssemblyReference.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\Estacionamento.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\Estacionamento.Infra.AssemblyInfoInputs.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\Estacionamento.Infra.AssemblyInfo.cs
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\Estacionamento.Infra.csproj.CoreCompileInputs.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\Estacionamento.Infra.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\ref\Estacionamento.Infra.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\Estacionamento.Infra.pdb
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.Infra\obj\Debug\net5.0\Estacionamento.Infra.genruntimeconfig.cache
