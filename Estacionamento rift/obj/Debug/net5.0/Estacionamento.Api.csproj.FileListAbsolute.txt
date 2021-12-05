@@ -52,3 +52,16 @@ C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\obj\Debug\ne
 C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\obj\Debug\net5.0\ref\Estacionamento.Api.dll
 C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\obj\Debug\net5.0\Estacionamento.Api.pdb
 C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\obj\Debug\net5.0\Estacionamento.Api.genruntimeconfig.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Estacionamento.Domain.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Estacionamento.Infra.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Estacionamento.SharedKernel.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\SharedKernel.Domain.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Estacionamento.Infra.pdb
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Estacionamento.Domain.pdb
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\bin\Debug\net5.0\Estacionamento.SharedKernel.pdb
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento rift\obj\Debug\net5.0\Estacionamento.Api.MvcApplicationPartsAssemblyInfo.cs

@@ -17,7 +17,7 @@ namespace Estacionamento.Infra.Data
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-SN81A5J\SQLEXPRESSR;Initial Catalog=Estacionamento;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-SN81A5J\SQLEXPRESS;Initial Catalog=Estacionamento;Integrated Security=True");
         }
 
         public DbSet<EmailsPessoaJuridicaEntity> EmailsPessoaJuridica { get; set; }

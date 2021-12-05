@@ -1,3 +1,4 @@
+using Estacionamento_rift.Infra;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +27,32 @@ namespace Estacionamento_rift
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => {
+                options.AddPolicy("SiteCorsPolicy", builder =>
+                    builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "Estacionamento",
+                        Version = "v 1.0",
+                        Description = "Estacionamento API",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "",
+                            Email = "",
+                            Url = new Uri(""),
+                        },
+                        License = new OpenApiLicense { Name = "MIT", Url = new Uri("") }
+                    });
+            });
             services.AddControllers();
+            services.Resolve();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +67,16 @@ namespace Estacionamento_rift
 
             app.UseRouting();
 
+            app.UseCors("SiteCorsPolicy");
+
             app.UseAuthorization();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Estacionamento v1.0");
+            });
 
             app.UseEndpoints(endpoints =>
             {

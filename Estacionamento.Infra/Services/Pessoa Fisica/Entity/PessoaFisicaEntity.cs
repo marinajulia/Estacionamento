@@ -17,7 +17,7 @@ namespace Estacionamento.Infra.Pessoa_Fisica.Entity
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Sexo { get; set; }
-        public string DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
         public string RG { get; set; }
         public string Endereço { get; set; }
         public string CPF { get; set; }
