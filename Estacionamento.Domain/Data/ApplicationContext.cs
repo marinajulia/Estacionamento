@@ -27,5 +27,11 @@ namespace Estacionamento.Infra.Data
         public DbSet<TelefonesPessoaJuridicaEntity> TelefonesPessoaJuridica { get; set; }
         public DbSet<TelefonesPessoaFisicaEntity> TelefonesPessoaFisica { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.CreateMap();
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

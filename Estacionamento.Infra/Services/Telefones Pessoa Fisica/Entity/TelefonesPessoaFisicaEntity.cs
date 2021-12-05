@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estacionamento.Infra.Pessoa_Fisica.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace Estacionamento.Infra.Telefone_Pessoa_Fisica.Entity
         public int Id { get; set; }
         public int IdPessoaFisica { get; set; }
         public string Telefone { get; set; }
+        public PessoaFisicaEntity PessoaFisica { get; set; }
     }
 }

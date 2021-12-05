@@ -22,4 +22,8 @@
     <ProjectReference Include="..\Estacionamento.SharedKernel\Estacionamento.SharedKernel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
