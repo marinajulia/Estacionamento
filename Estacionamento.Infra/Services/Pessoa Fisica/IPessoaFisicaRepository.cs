@@ -10,8 +10,6 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
     public interface IPessoaFisicaRepository
     {
         bool GetByCpf(string cpf);
-        bool CpfIsValid(string cpf);
-        bool RgIsValid(string rg);
         PessoaFisicaEntity PostPessoaFisica(PessoaFisicaEntity pessoaFisicaEntity);
     }
 }

@@ -6,6 +6,7 @@ using Estacionamento.Domain.Services.Telefones_Pessoa_Fisica;
 using Estacionamento.Domain.Services.Telefones_Pessoa_Fisica.Dto;
 using Estacionamento.Infra.Pessoa_Fisica.Entity;
 using Estacionamento.Infra.Telefone_Pessoa_Fisica.Entity;
+using Estacionamento.SharedKernel.Validations;
 using SharedKernel.Domain.Notification;
 using System;
 using System.Collections.Generic;
@@ -21,14 +22,17 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
         private readonly IPessoaFisicaRepository _pessoaFisicaRepository;
         private readonly ITelefonesPessoaFisicaRepository _telefonesPessoaFisicaRepository;
         private readonly IEmailsPessoaFisicaRepository _emailsPessoaFisicaRepository;
+        private readonly IValidations _validations;
 
         public PessoaFisicaService(INotification notification, IPessoaFisicaRepository pessoaFisicaRepository,
-            ITelefonesPessoaFisicaRepository telefonesPessoaFisica, IEmailsPessoaFisicaRepository emailsPessoaFisicaRepository)
+            ITelefonesPessoaFisicaRepository telefonesPessoaFisica, IEmailsPessoaFisicaRepository emailsPessoaFisicaRepository,
+            IValidations validations)
         {
             _notification = notification;
             _pessoaFisicaRepository = pessoaFisicaRepository;
             _telefonesPessoaFisicaRepository = telefonesPessoaFisica;
             _emailsPessoaFisicaRepository = emailsPessoaFisicaRepository;
+            _validations = validations;
         }
 
         public bool PostPessoaFisica(PessoaFisicaDto pessoaFisica, EmailsPessoaFisicaDto[] emails, TelefonesPessoaFisicaDto[] telefones)
@@ -45,19 +49,17 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
                 return false;
             }
 
-            if (!_pessoaFisicaRepository.CpfIsValid(pessoaFisica.CPF))
+            if (!_validations.CpfIsValid(pessoaFisica.CPF))
             {
                 _notification.AddWithReturn<bool>("Ops, este CPF não é valido");
                 return false;
             }
 
-            if (!_pessoaFisicaRepository.RgIsValid(pessoaFisica.RG))
+            if (!_validations.RgIsValid(pessoaFisica.RG))
             {
                 _notification.AddWithReturn<bool>("Ops, este RG não é valido");
                 return false;
             }
-
-            
 
             var postPessoaFisica = _pessoaFisicaRepository.PostPessoaFisica(new PessoaFisicaEntity
             {
@@ -85,7 +87,7 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
 
             foreach (var email in emails)
             {
-                if (!_emailsPessoaFisicaRepository.EmailIsValid(email.Email))
+                if (!_validations.EmailIsValid(email.Email))
                 {
                     _notification.AddWithReturn<bool>("Ops, este email não é valido");
                     return false;

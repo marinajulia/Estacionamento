@@ -10,6 +10,5 @@ namespace Estacionamento.Domain.Services.Emails_Pessoa_Fisica
     public interface IEmailsPessoaFisicaRepository
     {
         bool PostEmail(EmailsPessoaFisicaEntity emailsPessoaFisicaEntity);
-        bool EmailIsValid(string email);
     }
 }
