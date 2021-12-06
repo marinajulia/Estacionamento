@@ -9,6 +9,19 @@ namespace Estacionamento.SharedKernel.Validations
 {
     public class Validations : IValidations
     {
+        public bool CnpjIsValid(string cnpj)
+        {
+            string validCnpj = @"/^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/";
+            Regex regex = new Regex(validCnpj);
+
+            var isValid = regex.Match(cnpj);
+
+            if (!isValid.Success)
+                return false;
+
+            return true;
+        }
+
         public bool CpfIsValid(string cpf)
         {
             string validCpf = @"[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}";

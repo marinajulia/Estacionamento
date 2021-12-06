@@ -1,18 +1,11 @@
 ﻿using Estacionamento.Domain.Emails_Pessoa_Fisica.Entity;
 using Estacionamento.Domain.Services.Emails_Pessoa_Fisica;
-using Estacionamento.Domain.Services.Emails_Pessoa_Fisica.Dto;
 using Estacionamento.Domain.Services.Pessoa_Fisica.Dto;
 using Estacionamento.Domain.Services.Telefones_Pessoa_Fisica;
-using Estacionamento.Domain.Services.Telefones_Pessoa_Fisica.Dto;
 using Estacionamento.Infra.Pessoa_Fisica.Entity;
 using Estacionamento.Infra.Telefone_Pessoa_Fisica.Entity;
 using Estacionamento.SharedKernel.Validations;
 using SharedKernel.Domain.Notification;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Estacionamento.Domain.Services.Pessoa_Fisica
 {
@@ -43,15 +36,15 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
                 return false;
             }
 
-            if (_pessoaFisicaRepository.GetByCpf(pessoaFisica.CPF))
-            {
-                _notification.AddWithReturn<bool>("Ops, este CPF já está cadastrado");
-                return false;
-            }
-
             if (!_validations.CpfIsValid(pessoaFisica.CPF))
             {
                 _notification.AddWithReturn<bool>("Ops, este CPF não é valido");
+                return false;
+            }
+
+            if (_pessoaFisicaRepository.GetByCpf(pessoaFisica.CPF))
+            {
+                _notification.AddWithReturn<bool>("Ops, este CPF já está cadastrado");
                 return false;
             }
 
