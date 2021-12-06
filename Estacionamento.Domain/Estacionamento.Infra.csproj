@@ -23,10 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="SharedKernel.Domain">
       <HintPath>..\Dlls\SharedKernel.Domain.dll</HintPath>
     </Reference>

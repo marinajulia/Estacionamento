@@ -24,7 +24,6 @@ namespace Estacionamento_rift
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options => {
@@ -39,23 +38,22 @@ namespace Estacionamento_rift
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "Estacionamento",
+                        Title = "News",
                         Version = "v 1.0",
-                        Description = "Estacionamento API",
+                        Description = "News API",
                         Contact = new OpenApiContact
                         {
-                            Name = "",
-                            Email = "",
-                            Url = new Uri(""),
+                            Name = "Cloudmed",
+                            Email = "suporte@cloudmed.io",
+                            Url = new Uri("https://www.cloudmed.io"),
                         },
-                        License = new OpenApiLicense { Name = "MIT", Url = new Uri("") }
+                        License = new OpenApiLicense { Name = "MIT", Url = new Uri("https://www.cloudmed.io") }
                     });
             });
             services.AddControllers();
             services.Resolve();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -75,7 +73,7 @@ namespace Estacionamento_rift
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Estacionamento v1.0");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "News v1.0");
             });
 
             app.UseEndpoints(endpoints =>
@@ -85,3 +83,4 @@ namespace Estacionamento_rift
         }
     }
 }
+    

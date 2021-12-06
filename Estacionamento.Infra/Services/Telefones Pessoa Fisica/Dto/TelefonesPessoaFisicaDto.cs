@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Estacionamento.Domain.Services.Telefones_Pessoa_Fisica.Dto
 {
-    class TelefonesPessoaFisicaDto
+    public class TelefonesPessoaFisicaDto
     {
+        public int Id { get; set; }
+        public int IdPessoaFisica { get; set; }
+        public string Telefone { get; set; }
     }
 }
