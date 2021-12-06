@@ -50,5 +50,21 @@ namespace Estacionamento.Infra.Repositories.PessoaFisica
                 return pessoaFisicaEntity;
             }
         }
+
+        public bool RgIsValid(string rg)
+        {
+            using (var context = new ApplicationContext())
+            {
+                string validRg = @"(^\d{1,2}).?(\d{3}).?(\d{3})-?(\d{1}|X|x$)";
+                Regex regex = new Regex(validRg);
+
+                var isValid = regex.Match(rg);
+
+                if (isValid == null)
+                    return false;
+
+                return true;
+            }
+        }
     }
 }
