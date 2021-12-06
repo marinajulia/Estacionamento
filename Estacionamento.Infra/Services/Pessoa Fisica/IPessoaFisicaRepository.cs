@@ -11,5 +11,6 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
     {
         bool GetByCpf(string cpf);
         PessoaFisicaEntity PostPessoaFisica(PessoaFisicaEntity pessoaFisicaEntity);
+        bool SexoIsValid(string sexo);
     }
 }

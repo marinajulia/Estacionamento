@@ -16,7 +16,7 @@ namespace Estacionamento.SharedKernel.Validations
 
             var isValid = regex.Match(cpf);
 
-            if (isValid == null)
+            if (!isValid.Success)
                 return false;
 
             return true;
@@ -24,12 +24,12 @@ namespace Estacionamento.SharedKernel.Validations
 
         public bool EmailIsValid(string email)
         {
-            string validEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            string validEmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
             Regex regex = new Regex(validEmail);
 
             var isValid = regex.Match(validEmail);
 
-            if (isValid == null)
+            if (!isValid.Success)
                 return false;
 
             return true;
@@ -42,7 +42,7 @@ namespace Estacionamento.SharedKernel.Validations
 
             var isValid = regex.Match(rg);
 
-            if (isValid == null)
+            if (!isValid.Success)
                 return false;
 
             return true;

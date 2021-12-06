@@ -21,9 +21,9 @@ namespace Estacionamento_rift.Controllers.Pessoa_Fisica
         }
 
         [HttpPost]
-        public IActionResult Post(PessoaFisicaDto pessoaFisicaDto, EmailsPessoaFisicaDto[] emails, TelefonesPessoaFisicaDto[] telefones)
+        public IActionResult Post(PessoaFisicaDto pessoaFisicaDto, string[] telefones, string[] emails)
         {
-            var response = _pessoaFisicaService.PostPessoaFisica(pessoaFisicaDto, emails, telefones);
+            var response = _pessoaFisicaService.PostPessoaFisica(pessoaFisicaDto, telefones, emails);
 
             if (!response)
                 return BadRequest(_notification.GetErrors());

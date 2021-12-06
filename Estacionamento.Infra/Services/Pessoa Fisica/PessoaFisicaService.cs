@@ -35,7 +35,7 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
             _validations = validations;
         }
 
-        public bool PostPessoaFisica(PessoaFisicaDto pessoaFisica, EmailsPessoaFisicaDto[] emails, TelefonesPessoaFisicaDto[] telefones)
+        public bool PostPessoaFisica(PessoaFisicaDto pessoaFisica, string[] telefones, string[] emails)
         {
             if (string.IsNullOrEmpty(pessoaFisica.CPF) || string.IsNullOrEmpty(pessoaFisica.Nome))
             {
@@ -43,7 +43,7 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
                 return false;
             }
 
-            if (!_pessoaFisicaRepository.GetByCpf(pessoaFisica.CPF))
+            if (_pessoaFisicaRepository.GetByCpf(pessoaFisica.CPF))
             {
                 _notification.AddWithReturn<bool>("Ops, este CPF já está cadastrado");
                 return false;
@@ -61,6 +61,12 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
                 return false;
             }
 
+            if (!_pessoaFisicaRepository.SexoIsValid(pessoaFisica.Sexo))
+            {
+                _notification.AddWithReturn<bool>("Ops, insira um sexo válido");
+                return false;
+            }
+
             var postPessoaFisica = _pessoaFisicaRepository.PostPessoaFisica(new PessoaFisicaEntity
             {
                 Nome = pessoaFisica.Nome,
@@ -71,31 +77,21 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
                 Sexo= pessoaFisica.Sexo
             });
 
-            var idPessoaFisicaDto = new PessoaFisicaDto
-            {
-                Id = postPessoaFisica.Id
-            };
-
             foreach(var telefone in telefones)
             {
                 _telefonesPessoaFisicaRepository.PostTelefone(new TelefonesPessoaFisicaEntity
                 {
-                    IdPessoaFisica = idPessoaFisicaDto.Id,
-                    Telefone = telefone.Telefone,
+                    IdPessoaFisica = postPessoaFisica.Id,
+                    Telefone = telefone
                 });
             }
 
             foreach (var email in emails)
             {
-                if (!_validations.EmailIsValid(email.Email))
-                {
-                    _notification.AddWithReturn<bool>("Ops, este email não é valido");
-                    return false;
-                }
                 _emailsPessoaFisicaRepository.PostEmail(new EmailsPessoaFisicaEntity
                 {
-                    IdPessoaFisica = idPessoaFisicaDto.Id,
-                    Email = email.Email
+                    IdPessoaFisica = postPessoaFisica.Id,
+                    Email = email
                 });
             }
             return true;

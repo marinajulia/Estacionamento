@@ -35,6 +35,14 @@ namespace Estacionamento.Infra.Repositories.PessoaFisica
                 return pessoaFisicaEntity;
             }
         }
+
+        public bool SexoIsValid(string sexo)
+        {
+            if (string.IsNullOrEmpty(sexo) || sexo.Trim().ToLower() == "feminino" || sexo.Trim().ToLower() == "masculino")
+                return true;
+
+            return false;
+        }
     }
 }
 

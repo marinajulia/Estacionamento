@@ -11,6 +11,6 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
 {
     public interface IPessoaFisicaService
     {
-        bool PostPessoaFisica(PessoaFisicaDto pessoaFisica, EmailsPessoaFisicaDto[] emails, TelefonesPessoaFisicaDto[] telefones);
+        bool PostPessoaFisica(PessoaFisicaDto pessoaFisica, string[] telefones, string[] emails);
     }
 }
