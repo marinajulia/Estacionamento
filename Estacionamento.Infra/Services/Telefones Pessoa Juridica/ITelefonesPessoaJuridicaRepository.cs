@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estacionamento.Domain.Telefones_Pessoa_Juridica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace Estacionamento.Domain.Services.Telefones_Pessoa_Juridica
 {
     public interface ITelefonesPessoaJuridicaRepository
     {
+        bool PostTelefone(TelefonesPessoaJuridicaEntity telefonesPessoaJuridica);
     }
 }

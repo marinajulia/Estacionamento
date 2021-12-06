@@ -1,7 +1,9 @@
-﻿using Estacionamento.Domain.Pessoa_Juridica.Entity;
+﻿using Estacionamento.Domain.Emails_Pessoa_Juridica;
+using Estacionamento.Domain.Pessoa_Juridica.Entity;
 using Estacionamento.Domain.Services.Emails_Pessoa_Juridica;
 using Estacionamento.Domain.Services.Pessoa_Juridica.Dto;
 using Estacionamento.Domain.Services.Telefones_Pessoa_Juridica;
+using Estacionamento.Domain.Telefones_Pessoa_Juridica;
 using Estacionamento.SharedKernel.Validations;
 using SharedKernel.Domain.Notification;
 
@@ -54,6 +56,24 @@ namespace Estacionamento.Domain.Services.Pessoa_Juridica.Entity
                 NomeFantasia = pessoajuridica.NomeFantasia,
                 RazaoSocial = pessoajuridica.RazaoSocial
             });
+
+            foreach (var telefone in telefones)
+            {
+                _telefonesPessoaJuridicaRepository.PostTelefone(new TelefonesPessoaJuridicaEntity
+                {
+                    IdPessoaJuridica = postPessoaJuridica.Id,
+                    Telefone = telefone
+                });
+            }
+
+            foreach (var email in emails)
+            {
+                _emailsPessoaJuridicaRepository.PostEmail(new EmailsPessoaJuridicaEntity
+                {
+                    IdPessoaJuridica = postPessoaJuridica.Id,
+                    Email = email
+                });
+            }
             return true;
         }
     }

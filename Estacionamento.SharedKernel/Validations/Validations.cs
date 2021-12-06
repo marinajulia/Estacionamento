@@ -11,15 +11,40 @@ namespace Estacionamento.SharedKernel.Validations
     {
         public bool CnpjIsValid(string cnpj)
         {
-            string validCnpj = @"/^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/";
-            Regex regex = new Regex(validCnpj);
+            var convertedInput = $"{cnpj}";
+            convertedInput = convertedInput.PadLeft(14, '0');
 
-            var isValid = regex.Match(cnpj);
+            var first = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+            var second = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
-            if (!isValid.Success)
+            if (convertedInput.Length != 14)
                 return false;
 
-            return true;
+            var cnpjRange = convertedInput.Substring(0, 12);
+            var sumValue = 0;
+
+            for (var i = 0; i < 12; i++)
+                sumValue += int.Parse(cnpjRange[i].ToString()) * first[i];
+
+            var remnant = (sumValue % 11);
+
+            if (remnant < 2)
+                remnant = 0;
+
+            remnant = 11 - remnant;
+            var digit = remnant.ToString();
+            cnpjRange = cnpjRange + digit;
+            sumValue = 0;
+            for (var i = 0; i < 13; i++)
+                sumValue += int.Parse(cnpjRange[i].ToString()) * second[i];
+            remnant = (sumValue % 11);
+            if (remnant < 2)
+                remnant = 0;
+
+            remnant = 11 - remnant;
+            digit += remnant;
+
+            return convertedInput.EndsWith(digit);
         }
 
         public bool CpfIsValid(string cpf)
