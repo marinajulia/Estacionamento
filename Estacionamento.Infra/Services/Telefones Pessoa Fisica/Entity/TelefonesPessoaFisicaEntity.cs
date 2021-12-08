@@ -1,10 +1,5 @@
 ﻿using Estacionamento.Infra.Pessoa_Fisica.Entity;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Estacionamento.Infra.Telefone_Pessoa_Fisica.Entity
 {

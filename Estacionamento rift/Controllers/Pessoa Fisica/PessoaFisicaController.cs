@@ -5,7 +5,7 @@ using SharedKernel.Domain.Notification;
 
 namespace Estacionamento_rift.Controllers.Pessoa_Fisica
 {
-    //[ApiController]
+    [ApiController]
     [Route("pessoafisica")]
     public class PessoaFisicaController : Controller
     {
@@ -19,14 +19,21 @@ namespace Estacionamento_rift.Controllers.Pessoa_Fisica
         }
 
         [HttpPost]
-        public IActionResult Post(PessoaFisicaDto pessoaFisicaDto, string[] telefones, string[] emails)
+        public IActionResult Post(PessoaFisicaDto pessoaFisicaDto)
         {
-            var response = _pessoaFisicaService.PostPessoaFisica(pessoaFisicaDto, telefones, emails);
+            var response = _pessoaFisicaService.PostPessoaFisica(pessoaFisicaDto);
 
             if (!response)
                 return BadRequest(_notification.GetErrors());
 
             return Ok(_notification.AddWithReturn<IActionResult>("Cadastro realizado com sucesso!"));
+        }
+
+        [HttpGet]
+        public IActionResult GetByCPF(string cpf)
+        {
+            var response = _pessoaFisicaService.GetByCpfPessoaFisica(cpf);
+            return Ok(response);
         }
     }
 }

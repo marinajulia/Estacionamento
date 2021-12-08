@@ -1,4 +1,6 @@
 ﻿using Estacionamento.Domain.Emails_Pessoa_Fisica.Entity;
+using Estacionamento.Domain.Services.Emails_Pessoa_Fisica.Dto;
+using Estacionamento.Domain.Services.Telefones_Pessoa_Fisica.Dto;
 using Estacionamento.Infra.Telefone_Pessoa_Fisica.Entity;
 using System;
 using System.Collections.Generic;
@@ -13,5 +15,8 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica.Dto
         public string RG { get; set; }
         public string Endereço { get; set; }
         public string CPF { get; set; }
+
+        public IEnumerable<TelefonesPessoaFisicaEntity> Telefones { get; set; }
+        public IEnumerable<EmailsPessoaFisicaEntity> Emails { get; set; }
     }
 }

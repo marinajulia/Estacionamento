@@ -41,13 +41,7 @@ namespace Estacionamento_rift
                         Title = "News",
                         Version = "v 1.0",
                         Description = "News API",
-                        Contact = new OpenApiContact
-                        {
-                            Name = "Cloudmed",
-                            Email = "suporte@cloudmed.io",
-                            Url = new Uri("https://www.cloudmed.io"),
-                        },
-                        License = new OpenApiLicense { Name = "MIT", Url = new Uri("https://www.cloudmed.io") }
+                        
                     });
             });
             services.AddControllers();

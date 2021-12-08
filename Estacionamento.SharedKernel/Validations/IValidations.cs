@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Estacionamento.SharedKernel.Validations
+﻿namespace Estacionamento.SharedKernel.Validations
 {
     public interface IValidations
     {

@@ -1,12 +1,9 @@
 ﻿using Estacionamento.Domain.Services.Pessoa_Fisica;
 using Estacionamento.Infra.Data;
 using Estacionamento.Infra.Pessoa_Fisica.Entity;
-using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Estacionamento.Infra.Repositories.PessoaFisica
 {
@@ -22,6 +19,38 @@ namespace Estacionamento.Infra.Repositories.PessoaFisica
                     return false;
 
                 return true;
+            }
+        }
+
+        public IEnumerable<PessoaFisicaEntity> GetByCpfPessoaFisica(string cpf)
+        {
+            using (var context = new ApplicationContext())
+            {
+                return context.PessoaFisica.Where(x => x.CPF.Contains(cpf))
+                    .Include(x => x.Telefones)
+                    .Include(x => x.Emails)
+                    .ToList();
+            }
+        }
+
+        public IEnumerable<PessoaFisicaEntity> GetByName(string name)
+        {
+            using (var context = new ApplicationContext())
+            {
+                return context.PessoaFisica.Where(x => x.Nome == name)
+                    .Include(x=> x.Telefones)
+                    .Include(x=> x.Emails)
+                    .ToList();
+            }
+        }
+
+        public IEnumerable<PessoaFisicaEntity> GetByRgPessoaFisica(string rg)
+        {
+            using (var context = new ApplicationContext())
+            {
+                return context.PessoaFisica.Where(x => x.RG.Contains(rg))
+                    .Include(x => x.Telefones)
+                    .Include(x => x.Emails).ToList();
             }
         }
 

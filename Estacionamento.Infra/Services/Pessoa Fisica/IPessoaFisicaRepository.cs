@@ -1,9 +1,5 @@
 ﻿using Estacionamento.Infra.Pessoa_Fisica.Entity;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Estacionamento.Domain.Services.Pessoa_Fisica
 {
@@ -12,5 +8,8 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
         bool GetByCpf(string cpf);
         PessoaFisicaEntity PostPessoaFisica(PessoaFisicaEntity pessoaFisicaEntity);
         bool SexoIsValid(string sexo);
+        IEnumerable<PessoaFisicaEntity> GetByCpfPessoaFisica(string cpf);
+        IEnumerable<PessoaFisicaEntity> GetByRgPessoaFisica(string rg);
+        IEnumerable<PessoaFisicaEntity> GetByName(string name);
     }
 }
