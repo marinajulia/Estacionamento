@@ -29,10 +29,24 @@ namespace Estacionamento_rift.Controllers.Pessoa_Fisica
             return Ok(_notification.AddWithReturn<IActionResult>("Cadastro realizado com sucesso!"));
         }
 
-        [HttpGet]
+        [HttpGet("getbycpf")]
         public IActionResult GetByCPF(string cpf)
         {
             var response = _pessoaFisicaService.GetByCpfPessoaFisica(cpf);
+            return Ok(response);
+        }
+
+        [HttpGet("getbyname")]
+        public IActionResult GetByName(string nome)
+        {
+            var response = _pessoaFisicaService.GetByName(nome);
+            return Ok(response);
+        }
+
+        [HttpGet("getbyrg")]
+        public IActionResult GetByRg(string rg)
+        {
+            var response = _pessoaFisicaService.GetByRgPessoaFisica(rg);
             return Ok(response);
         }
     }

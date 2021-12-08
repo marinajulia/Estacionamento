@@ -6,6 +6,8 @@ using Estacionamento.Domain.Services.Telefones_Pessoa_Juridica;
 using Estacionamento.Domain.Telefones_Pessoa_Juridica;
 using Estacionamento.SharedKernel.Validations;
 using SharedKernel.Domain.Notification;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Estacionamento.Domain.Services.Pessoa_Juridica.Entity
 {
@@ -29,7 +31,67 @@ namespace Estacionamento.Domain.Services.Pessoa_Juridica.Entity
             _validations = validations;
         }
 
-        public bool PostPessoaJuridica(PessoaJuridicaDto pessoajuridica, string[] telefones, string[] emails)
+        public IEnumerable<PessoaJuridicaDto> GetByCNPJPessoaJuridica(string cnpj)
+        {
+            var pessoaJuridica = _pessoaJuridicaRepository.GetByCNPJPessoaJuridica(cnpj);
+
+            return pessoaJuridica.Select(x => new PessoaJuridicaDto
+            {
+                RazaoSocial= x.RazaoSocial,
+                NomeFantasia = x.NomeFantasia,
+                Endereço = x.Endereço,
+                CNPJ = x.CNPJ,
+                Emails = GetEmailsPessoaFisica(x.Emails),
+                Telefones = GetTelefonesPessoaFisica(x.Telefones)
+            }).ToList();
+        }
+
+        public IEnumerable<PessoaJuridicaDto> GetByNomeFantasia(string nomeFantasia)
+        {
+            var pessoaJuridica = _pessoaJuridicaRepository.GetByNomeFantasia(nomeFantasia);
+
+            return pessoaJuridica.Select(x => new PessoaJuridicaDto
+            {
+                RazaoSocial = x.RazaoSocial,
+                NomeFantasia = x.NomeFantasia,
+                Endereço = x.Endereço,
+                CNPJ = x.CNPJ,
+                Emails = GetEmailsPessoaFisica(x.Emails),
+                Telefones = GetTelefonesPessoaFisica(x.Telefones)
+            }).ToList();
+        }
+
+        public IEnumerable<PessoaJuridicaDto> GetByRazaoSocial(string razaoSocial)
+        {
+            var pessoaJuridica = _pessoaJuridicaRepository.GetByRazaoSocial(razaoSocial);
+
+            return pessoaJuridica.Select(x => new PessoaJuridicaDto
+            {
+                RazaoSocial = x.RazaoSocial,
+                NomeFantasia = x.NomeFantasia,
+                Endereço = x.Endereço,
+                CNPJ = x.CNPJ,
+                Emails = GetEmailsPessoaFisica(x.Emails),
+                Telefones = GetTelefonesPessoaFisica(x.Telefones)
+            }).ToList();
+        }
+
+        private IEnumerable<EmailsPessoaJuridicaEntity> GetEmailsPessoaFisica(IEnumerable<EmailsPessoaJuridicaEntity> emailsPessoaJuridicaEntity)
+        {
+            return emailsPessoaJuridicaEntity.Select(x => new EmailsPessoaJuridicaEntity
+            {
+                Email = x.Email
+            });
+        }
+        private IEnumerable<TelefonesPessoaJuridicaEntity> GetTelefonesPessoaFisica(IEnumerable<TelefonesPessoaJuridicaEntity> telefonesPessoaJuridicaEntity)
+        {
+            return telefonesPessoaJuridicaEntity.Select(x => new TelefonesPessoaJuridicaEntity
+            {
+                Telefone = x.Telefone
+            });
+        }
+
+        public bool PostPessoaJuridica(PessoaJuridicaDto pessoajuridica)
         {
             if (string.IsNullOrEmpty(pessoajuridica.CNPJ) || string.IsNullOrEmpty(pessoajuridica.RazaoSocial))
             {
@@ -57,21 +119,26 @@ namespace Estacionamento.Domain.Services.Pessoa_Juridica.Entity
                 RazaoSocial = pessoajuridica.RazaoSocial
             });
 
-            foreach (var telefone in telefones)
+            foreach (var telefone in pessoajuridica.Telefones)
             {
                 _telefonesPessoaJuridicaRepository.PostTelefone(new TelefonesPessoaJuridicaEntity
                 {
                     IdPessoaJuridica = postPessoaJuridica.Id,
-                    Telefone = telefone
+                    Telefone = telefone.Telefone
                 });
             }
 
-            foreach (var email in emails)
+            foreach (var email in pessoajuridica.Emails)
             {
+                if (!_validations.EmailIsValid(email.Email))
+                {
+                    _notification.AddWithReturn<bool>("Ops, este um email é valido");
+                    return false;
+                }
                 _emailsPessoaJuridicaRepository.PostEmail(new EmailsPessoaJuridicaEntity
                 {
                     IdPessoaJuridica = postPessoaJuridica.Id,
-                    Email = email
+                    Email = email.Email
                 });
             }
             return true;

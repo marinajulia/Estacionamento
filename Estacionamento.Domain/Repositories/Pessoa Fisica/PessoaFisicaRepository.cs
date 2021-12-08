@@ -13,7 +13,7 @@ namespace Estacionamento.Infra.Repositories.PessoaFisica
         {
             using (var context = new ApplicationContext())
             {
-                var CPF = context.PessoaFisica.FirstOrDefault(x => x.CPF == cpf);
+                var CPF = context.PessoaFisica.FirstOrDefault(x => x.CPF.Trim() == cpf.Trim());
 
                 if (CPF == null)
                     return false;
@@ -26,7 +26,7 @@ namespace Estacionamento.Infra.Repositories.PessoaFisica
         {
             using (var context = new ApplicationContext())
             {
-                return context.PessoaFisica.Where(x => x.CPF.Contains(cpf))
+                return context.PessoaFisica.Where(x => x.CPF.Trim().Contains(cpf.Trim()))
                     .Include(x => x.Telefones)
                     .Include(x => x.Emails)
                     .ToList();
@@ -37,7 +37,7 @@ namespace Estacionamento.Infra.Repositories.PessoaFisica
         {
             using (var context = new ApplicationContext())
             {
-                return context.PessoaFisica.Where(x => x.Nome == name)
+                return context.PessoaFisica.Where(x => x.Nome.Trim().ToLower().Contains(name.Trim().ToLower()))
                     .Include(x=> x.Telefones)
                     .Include(x=> x.Emails)
                     .ToList();
@@ -48,7 +48,7 @@ namespace Estacionamento.Infra.Repositories.PessoaFisica
         {
             using (var context = new ApplicationContext())
             {
-                return context.PessoaFisica.Where(x => x.RG.Contains(rg))
+                return context.PessoaFisica.Where(x => x.RG.Trim().Contains(rg.Trim()))
                     .Include(x => x.Telefones)
                     .Include(x => x.Emails).ToList();
             }

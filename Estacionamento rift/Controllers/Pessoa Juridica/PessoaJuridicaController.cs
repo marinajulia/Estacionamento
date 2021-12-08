@@ -18,14 +18,35 @@ namespace Estacionamento_rift.Controllers.Pessoa_Juridica
         }
 
         [HttpPost]
-        public IActionResult Post(PessoaJuridicaDto pessoaJuridicaDto, string[] telefones, string[] emails)
+        public IActionResult Post(PessoaJuridicaDto pessoaJuridicaDto)
         {
-            var response = _pessoaJuridicaService.PostPessoaJuridica(pessoaJuridicaDto, telefones, emails);
+            var response = _pessoaJuridicaService.PostPessoaJuridica(pessoaJuridicaDto);
 
             if (!response)
                 return BadRequest(_notification.GetErrors());
 
             return Ok(_notification.AddWithReturn<IActionResult>("Cadastro realizado com sucesso!"));
+        }
+
+        [HttpGet("getbycnpj")]
+        public IActionResult GetByCnpj(string cnpj)
+        {
+            var response = _pessoaJuridicaService.GetByCNPJPessoaJuridica(cnpj);
+            return Ok(response);
+        }
+
+        [HttpGet("getbyrazaosocial")]
+        public IActionResult GetByRazaoSocial(string razaoSocial)
+        {
+            var response = _pessoaJuridicaService.GetByRazaoSocial(razaoSocial);
+            return Ok(response);
+        }
+
+        [HttpGet("getbynomefantasia")]
+        public IActionResult GetByNomeFantasia(string nomeFantasia)
+        {
+            var response = _pessoaJuridicaService.GetByNomeFantasia(nomeFantasia);
+            return Ok(response);
         }
     }
 }
