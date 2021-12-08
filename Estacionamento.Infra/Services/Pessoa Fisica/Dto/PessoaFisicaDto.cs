@@ -1,6 +1,4 @@
 ﻿using Estacionamento.Domain.Emails_Pessoa_Fisica.Entity;
-using Estacionamento.Domain.Services.Emails_Pessoa_Fisica.Dto;
-using Estacionamento.Domain.Services.Telefones_Pessoa_Fisica.Dto;
 using Estacionamento.Infra.Telefone_Pessoa_Fisica.Entity;
 using System;
 using System.Collections.Generic;

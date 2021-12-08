@@ -4,7 +4,6 @@ using Estacionamento.Domain.Telefones_Pessoa_Juridica;
 using Estacionamento.Infra.Telefone_Pessoa_Fisica.Entity;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Estacionamento.Infra.Data
 {
     public static class BaseMap

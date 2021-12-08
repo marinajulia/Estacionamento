@@ -1,11 +1,6 @@
 ﻿using Estacionamento.Domain.Pessoa_Juridica.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Estacionamento.Infra.Data.Configuration.PessoaJuridica
 {

@@ -132,7 +132,7 @@ namespace Estacionamento.Domain.Services.Pessoa_Juridica.Entity
             {
                 if (!_validations.EmailIsValid(email.Email))
                 {
-                    _notification.AddWithReturn<bool>("Ops, este um email é valido");
+                    _notification.AddWithReturn<bool>("Ops, este email é inválido");
                     return false;
                 }
                 _emailsPessoaJuridicaRepository.PostEmail(new EmailsPessoaJuridicaEntity

@@ -5,11 +5,6 @@ using Estacionamento.Domain.Telefones_Pessoa_Juridica;
 using Estacionamento.Infra.Pessoa_Fisica.Entity;
 using Estacionamento.Infra.Telefone_Pessoa_Fisica.Entity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Estacionamento.Infra.Data
 {

@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Estacionamento.Domain.Emails_Pessoa_Fisica.Entity;
+﻿using Estacionamento.Domain.Emails_Pessoa_Fisica.Entity;
 using Estacionamento.Domain.Services.Emails_Pessoa_Fisica;
 using Estacionamento.Domain.Services.Pessoa_Fisica.Dto;
 using Estacionamento.Domain.Services.Telefones_Pessoa_Fisica;
