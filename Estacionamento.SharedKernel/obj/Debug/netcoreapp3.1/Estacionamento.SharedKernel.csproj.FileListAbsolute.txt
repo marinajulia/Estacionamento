@@ -1,0 +1,9 @@
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\bin\Debug\netcoreapp3.1\Estacionamento.SharedKernel.deps.json
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\bin\Debug\netcoreapp3.1\Estacionamento.SharedKernel.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\bin\Debug\netcoreapp3.1\Estacionamento.SharedKernel.pdb
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\obj\Debug\netcoreapp3.1\Estacionamento.SharedKernel.csproj.AssemblyReference.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\obj\Debug\netcoreapp3.1\Estacionamento.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\obj\Debug\netcoreapp3.1\Estacionamento.SharedKernel.AssemblyInfo.cs
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\obj\Debug\netcoreapp3.1\Estacionamento.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\obj\Debug\netcoreapp3.1\Estacionamento.SharedKernel.dll
+C:\Users\marin\source\repos\Estacionamento rift\Estacionamento.SharedKernel\obj\Debug\netcoreapp3.1\Estacionamento.SharedKernel.pdb
