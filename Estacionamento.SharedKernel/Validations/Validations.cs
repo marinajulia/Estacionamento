@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -62,15 +63,15 @@ namespace Estacionamento.SharedKernel.Validations
 
         public bool EmailIsValid(string email)
         {
-            string validEmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-            Regex regex = new Regex(validEmail);
-
-            var isValid = regex.Match(validEmail);
-
-            if (!isValid.Success)
+            try
+            {
+                var address = new MailAddress(email).Address;
+                return true;
+            }
+            catch (FormatException)
+            {
                 return false;
-
-            return true;
+            }
         }
 
         public bool RgIsValid(string rg)

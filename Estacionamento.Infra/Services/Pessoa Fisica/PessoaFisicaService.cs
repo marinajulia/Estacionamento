@@ -117,6 +117,12 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
                 return false;
             }
 
+            if (_pessoaFisicaRepository.GetByRg(pessoaFisica.RG))
+            {
+                _notification.AddWithReturn<bool>("Ops, este RG já está cadastrado");
+                return false;
+            }
+
             if (!_validations.RgIsValid(pessoaFisica.RG))
             {
                 _notification.AddWithReturn<bool>("Ops, este RG não é valido");

@@ -38,9 +38,9 @@ namespace Estacionamento_rift
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "News",
+                        Title = "Estacionamento",
                         Version = "v 1.0",
-                        Description = "News API",
+                        Description = "Estacionamento API",
                         
                     });
             });

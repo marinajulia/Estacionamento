@@ -44,6 +44,19 @@ namespace Estacionamento.Infra.Repositories.PessoaFisica
             }
         }
 
+        public bool GetByRg(string rg)
+        {
+            using (var context = new ApplicationContext())
+            {
+                var RG = context.PessoaFisica.FirstOrDefault(x => x.RG.Trim() == rg.Trim());
+
+                if (RG == null)
+                    return false;
+
+                return true;
+            }
+        }
+
         public IEnumerable<PessoaFisicaEntity> GetByRgPessoaFisica(string rg)
         {
             using (var context = new ApplicationContext())

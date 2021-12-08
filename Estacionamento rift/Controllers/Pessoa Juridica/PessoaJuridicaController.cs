@@ -5,6 +5,7 @@ using SharedKernel.Domain.Notification;
 
 namespace Estacionamento_rift.Controllers.Pessoa_Juridica
 {
+    [ApiController]
     [Route("pessoajuridica")]
     public class PessoaJuridicaController : Controller
     {

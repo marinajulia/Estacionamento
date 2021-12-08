@@ -6,6 +6,7 @@ namespace Estacionamento.Domain.Services.Pessoa_Fisica
     public interface IPessoaFisicaRepository
     {
         bool GetByCpf(string cpf);
+        bool GetByRg(string rg);
         PessoaFisicaEntity PostPessoaFisica(PessoaFisicaEntity pessoaFisicaEntity);
         bool SexoIsValid(string sexo);
         IEnumerable<PessoaFisicaEntity> GetByCpfPessoaFisica(string cpf);
