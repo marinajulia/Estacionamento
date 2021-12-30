@@ -1,43 +1,16 @@
-## Getting Started
+## Estacionamento 
 
-ComiXtore is a fictious e-commerce of comic books made with data from Marvel Development API.
+ API destinada para organização e maior velocidade nos atendimentos de um estacionamento
 
-To run the app you can access https://comixtore.herokuapp.com/ or follow the steps below:
-
-First, clone the project:
-
-git clone https://github.com/EricaReis/comixtore.git
-
-After, install the dependencies:
-
-```bash
-npm install
-# or
-yarn install
-```
-
-Then
-
-```bash
-npm start
-# or
-yarn start
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Technology
 
-The following tools were used in the development of the ComiXtore application:
+>C#
+>.NetCore
 
-- [React](https://pt-br.reactjs.org/)
-
-## Deployed at: [Deploy](https://comixtore.herokuapp.com/ )
-
-## Developer
-
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/43284359?s=460&u=d0283f2331fb2e66792ff944985f576defbcfb77&v=4" width="100px;" alt=""/>
+## Swagger:
+No post da pessoa física, pode- se incluir 1 ou vários e-mails/telefones.
+ <img style="border-radius: 50%;" src="https://drive.google.com/file/d/1WtS6q2uuEeTfPQ01vvMUrFjFkTda8Xgt/view?usp=sharing" width="100px;" alt=""/>
  <br />
- <sub><b>Érica Beatriz dos Reis</b></sub>
 
-ericabeatrizdosreis@gmail.com
+ 
