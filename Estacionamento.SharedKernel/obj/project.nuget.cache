@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b5rVXqGRyg1bizD8SKVEF3TKVIgAFexDM6bJgioslus4poTo8jC30wWx+62prSWZuC1lcjlHReM2e5v0Fixlsw==",
+  "dgSpecHash": "VC2f7BLIhO2urm9jLf7PenWXlGEzJj9UZ9lAFBEMWfSmC87/JRstJ7bCjOmrWYvO32SSJvS7eyIkLhIOfdS4wA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj",
+  "projectFilePath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\marin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

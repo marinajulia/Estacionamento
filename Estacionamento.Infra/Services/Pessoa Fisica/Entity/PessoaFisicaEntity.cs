@@ -18,6 +18,7 @@ namespace Estacionamento.Infra.Pessoa_Fisica.Entity
         public string RG { get; set; }
         public string Endereço { get; set; }
         public string CPF { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         public IEnumerable<TelefonesPessoaFisicaEntity> Telefones { get; set; }
         public IEnumerable<EmailsPessoaFisicaEntity> Emails { get; set; }

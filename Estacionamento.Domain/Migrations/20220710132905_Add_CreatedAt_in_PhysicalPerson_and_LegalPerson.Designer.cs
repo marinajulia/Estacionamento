@@ -4,14 +4,16 @@ using Estacionamento.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Estacionamento.Infra.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220710132905_Add_CreatedAt_in_PhysicalPerson_and_LegalPerson")]
+    partial class Add_CreatedAt_in_PhysicalPerson_and_LegalPerson
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,9 +71,6 @@ namespace Estacionamento.Infra.Migrations
                     b.Property<string>("CNPJ")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Endereço")
                         .HasColumnType("nvarchar(max)");
 
@@ -80,6 +79,9 @@ namespace Estacionamento.Infra.Migrations
 
                     b.Property<string>("RazaoSocial")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("createdAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -116,9 +118,6 @@ namespace Estacionamento.Infra.Migrations
                     b.Property<string>("CPF")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime2");
 
@@ -133,6 +132,9 @@ namespace Estacionamento.Infra.Migrations
 
                     b.Property<string>("Sexo")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("createdAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

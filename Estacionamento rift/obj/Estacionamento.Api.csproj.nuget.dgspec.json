@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento rift\\Estacionamento.Api.csproj": {}
+    "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento rift\\Estacionamento.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento rift\\Estacionamento.Api.csproj": {
+    "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento rift\\Estacionamento.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento rift\\Estacionamento.Api.csproj",
+        "projectUniqueName": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento rift\\Estacionamento.Api.csproj",
         "projectName": "Estacionamento.Api",
-        "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento rift\\Estacionamento.Api.csproj",
+        "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento rift\\Estacionamento.Api.csproj",
         "packagesPath": "C:\\Users\\marin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento rift\\obj\\",
+        "outputPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento rift\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,14 +34,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Domain\\Estacionamento.Infra.csproj": {
-                "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Domain\\Estacionamento.Infra.csproj"
+              "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Domain\\Estacionamento.Infra.csproj": {
+                "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Domain\\Estacionamento.Infra.csproj"
               },
-              "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\Estacionamento.Domain.csproj": {
-                "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\Estacionamento.Domain.csproj"
+              "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Infra\\Estacionamento.Domain.csproj": {
+                "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Infra\\Estacionamento.Domain.csproj"
               },
-              "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj"
+              "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj"
               }
             }
           }
@@ -119,14 +119,14 @@
         }
       }
     },
-    "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Domain\\Estacionamento.Infra.csproj": {
+    "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Domain\\Estacionamento.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Domain\\Estacionamento.Infra.csproj",
+        "projectUniqueName": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Domain\\Estacionamento.Infra.csproj",
         "projectName": "Estacionamento.Infra",
-        "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Domain\\Estacionamento.Infra.csproj",
+        "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Domain\\Estacionamento.Infra.csproj",
         "packagesPath": "C:\\Users\\marin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Domain\\obj\\",
+        "outputPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -149,11 +149,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\Estacionamento.Domain.csproj": {
-                "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\Estacionamento.Domain.csproj"
+              "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Infra\\Estacionamento.Domain.csproj": {
+                "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Infra\\Estacionamento.Domain.csproj"
               },
-              "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj"
+              "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj"
               }
             }
           }
@@ -208,14 +208,14 @@
         }
       }
     },
-    "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\Estacionamento.Domain.csproj": {
+    "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Infra\\Estacionamento.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\Estacionamento.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Infra\\Estacionamento.Domain.csproj",
         "projectName": "Estacionamento.Domain",
-        "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\Estacionamento.Domain.csproj",
+        "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Infra\\Estacionamento.Domain.csproj",
         "packagesPath": "C:\\Users\\marin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.Infra\\obj\\",
+        "outputPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -238,8 +238,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj"
+              "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj"
               }
             }
           }
@@ -298,14 +298,14 @@
         }
       }
     },
-    "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj": {
+    "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj",
+        "projectUniqueName": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj",
         "projectName": "Estacionamento.SharedKernel",
-        "projectPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj",
+        "projectPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\Estacionamento.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\marin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento.SharedKernel\\obj\\",
+        "outputPath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

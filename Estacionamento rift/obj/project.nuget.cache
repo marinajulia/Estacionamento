@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "90zMxn54jtRnzaVrkPpwanZ0VDLUgvHffonbx6U87wLUbVeXZ34nOrpKcs6aNvaBfH3ZKnt/y3DRwboU7ZHCrA==",
+  "dgSpecHash": "Wcy8zTvmoCi1hJKdLZauB7cUlcPR2KtNo+2BQWe8jjpunnN7qRwyNAJPZoUV9/imVYM67GQFW9/DFgI5gQjjDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marin\\source\\repos\\Estacionamento rift\\Estacionamento rift\\Estacionamento.Api.csproj",
+  "projectFilePath": "C:\\Users\\marin\\OneDrive\\Documentos\\Projetos GitHub\\Estacionamento(backend)\\Estacionamento rift\\Estacionamento.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\marin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
